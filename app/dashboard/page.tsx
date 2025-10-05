@@ -21,9 +21,11 @@ export default function DashboardPage() {
   const country = searchParams.get("country") || ""
   const state = searchParams.get("state") || ""
   const city = searchParams.get("city") || ""
-  const initialVulnerabilities = (searchParams.get("vulnerabilities")?.split(",") as VulnerabilityType[]) || []
+  const initialVulnerabilities = (searchParams.get("vulnerabilities")?.split(",")[0] as VulnerabilityType) || ""
 
-  const [selectedTypes, setSelectedTypes] = React.useState<VulnerabilityType[]>(initialVulnerabilities)
+  // const [selectedTypes, setSelectedTypes] = React.useState<VulnerabilityType[]>(initialVulnerabilities)
+ 
+   const [selectedTypes, setSelectedTypes] = React.useState<VulnerabilityType>(initialVulnerabilities)
   const [severityFilter, setSeverityFilter] = React.useState(0)
   const [isSidebarCollapsed, setIsSidebarCollapsed] = React.useState(false)
   const [simulatedVulnerabilities, setSimulatedVulnerabilities] = React.useState<Vulnerability[] | null>(null)

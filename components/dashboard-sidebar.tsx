@@ -8,8 +8,8 @@ import type { VulnerabilityType } from "@/lib/types"
 import { vulnerabilityColors } from "@/lib/vulnerability-colors"
 
 interface DashboardSidebarProps {
-  selectedTypes: VulnerabilityType[]
-  onTypeChange: (types: VulnerabilityType[]) => void
+  selectedTypes: VulnerabilityType
+  onTypeChange: (types: VulnerabilityType) => void
   severityFilter: number
   onSeverityChange: (value: number) => void
   onReset: () => void
@@ -72,11 +72,7 @@ export function DashboardSidebar({
                   <button
                     key={type}
                     onClick={() => {
-                      if (isSelected) {
-                        onTypeChange(selectedTypes.filter((t) => t !== type))
-                      } else {
-                        onTypeChange([...selectedTypes, type])
-                      }
+                      onTypeChange(type)
                     }}
                     className={`flex w-full items-center gap-2 rounded-lg border p-3 text-left text-sm transition-colors ${
                       isSelected ? "border-primary bg-primary/10" : "border-border bg-background hover:bg-accent"

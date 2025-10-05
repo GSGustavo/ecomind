@@ -36,6 +36,24 @@ export function AIChatPanel({ vulnerabilities, onSimulationApply }: AIChatPanelP
       content:
         "Hello! I'm your AI urban planning assistant. Describe improvements you'd like to simulate, and I'll show you the predicted environmental impact.",
     },
+    // {
+    //   id: "2",
+    //   role: "assistant",
+    //   content:
+    //     "Hello! I'm your AI urban planning assistant. Describe improvements you'd like to simulate, and I'll show you the predicted environmental impact.",
+    // },
+    //  {
+    //   id: "3",
+    //   role: "assistant",
+    //   content:
+    //     "Hello! I'm your AI urban planning assistant. Describe improvements you'd like to simulate, and I'll show you the predicted environmental impact.",
+    // },
+    //  {
+    //   id: "4",
+    //   role: "assistant",
+    //   content:
+    //     "Hello! I'm your AI urban planning assistant. Describe improvements you'd like to simulate, and I'll show you the predicted environmental impact.",
+    // },
   ])
   const [input, setInput] = React.useState("")
   const [isProcessing, setIsProcessing] = React.useState(false)
