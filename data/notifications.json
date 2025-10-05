@@ -1,0 +1,53 @@
+{
+  "categories": [
+    {
+      "id": "air_quality",
+      "name": "Air Quality",
+      "color": "#3498DB",
+      "notifications": [
+        {
+          "id": 1,
+          "title": "High Pollution Detected",
+          "description": "PM2.5 levels exceeded safe limits in downtown area.",
+          "time": "2h ago",
+          "read": false
+        },
+        {
+          "id": 2,
+          "title": "Improved Air Conditions",
+          "description": "Air quality index improved by 15% in northern zone.",
+          "time": "1d ago",
+          "read": true
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "name": "Water Pollution",
+      "color": "#2ECC71",
+      "notifications": [
+        {
+          "id": 3,
+          "title": "Contamination Alert",
+          "description": "Elevated levels of nitrates found in river samples.",
+          "time": "4h ago",
+          "read": false
+        }
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure",
+      "color": "#F1C40F",
+      "notifications": [
+        {
+          "id": 4,
+          "title": "Waste Management Issue",
+          "description": "Increased waste detected near industrial district.",
+          "time": "3d ago",
+          "read": true
+        }
+      ]
+    }
+  ]
+}

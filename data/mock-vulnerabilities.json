@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "city": "New York",
+    "state": "New York",
+    "country": "United States",
+    "type": "Air Pollution",
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "severity": 0.8,
+    "population_affected": 500000,
+    "description": "High levels of PM2.5 and NO2 in downtown area"
+  },
+  {
+    "id": 2,
+    "city": "New York",
+    "state": "New York",
+    "country": "United States",
+    "type": "Heat Island",
+    "latitude": 40.7135,
+    "longitude": -74.01,
+    "severity": 0.6,
+    "population_affected": 300000,
+    "description": "Urban heat island effect in commercial district"
+  },
+  {
+    "id": 3,
+    "city": "New York",
+    "state": "New York",
+    "country": "United States",
+    "type": "Water Pollution",
+    "latitude": 40.715,
+    "longitude": -74.002,
+    "severity": 0.5,
+    "population_affected": 200000,
+    "description": "Elevated contaminant levels in water supply"
+  },
+  {
+    "id": 4,
+    "city": "New York",
+    "state": "New York",
+    "country": "United States",
+    "type": "Lack of Green Areas",
+    "latitude": 40.7589,
+    "longitude": -73.9851,
+    "severity": 0.7,
+    "population_affected": 450000,
+    "description": "Insufficient green space per capita"
+  },
+  {
+    "id": 5,
+    "city": "Los Angeles",
+    "state": "California",
+    "country": "United States",
+    "type": "Air Pollution",
+    "latitude": 34.0522,
+    "longitude": -118.2437,
+    "severity": 0.85,
+    "population_affected": 800000,
+    "description": "Severe smog and particulate matter"
+  },
+  {
+    "id": 6,
+    "city": "Los Angeles",
+    "state": "California",
+    "country": "United States",
+    "type": "Heat Island",
+    "latitude": 34.0489,
+    "longitude": -118.2518,
+    "severity": 0.75,
+    "population_affected": 600000,
+    "description": "Extreme urban heat concentration"
+  },
+  {
+    "id": 7,
+    "city": "Chicago",
+    "state": "Illinois",
+    "country": "United States",
+    "type": "Poor Transport Access",
+    "latitude": 41.8781,
+    "longitude": -87.6298,
+    "severity": 0.55,
+    "population_affected": 350000,
+    "description": "Limited public transit in outer neighborhoods"
+  },
+  {
+    "id": 8,
+    "city": "Chicago",
+    "state": "Illinois",
+    "country": "United States",
+    "type": "Health Infrastructure Deficiency",
+    "latitude": 41.8819,
+    "longitude": -87.6278,
+    "severity": 0.6,
+    "population_affected": 280000,
+    "description": "Insufficient healthcare facilities per capita"
+  }
+]
