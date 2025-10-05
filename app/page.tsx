@@ -10,13 +10,14 @@ import { Globe, Satellite, TrendingUp } from "lucide-react"
 import type { VulnerabilityType } from "@/lib/types"
 import locationsData from "@/data/locations.json"
 import { ThemeToggle } from "@/components/theme-toggle"
+import Image from "next/image";
 
 const vulnerabilityTypes: VulnerabilityType[] = [
   "Lack of Green Areas",
   "Air Pollution",
   // "Water Pollution",
   // "Heat Islands",
-  
+
   // "Poor Transport Access",
   // "Health Infrastructure Deficiency",
   // "Education Deficiency",
@@ -68,7 +69,13 @@ export default function HomePage() {
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-nasa-blue">
-              <Satellite className="h-6 w-6 text-white" />
+              <Image
+                src="/logo.png"     
+                alt="EcoMind Logo"
+                width={200}         
+                height={200}        
+                priority
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">EcoMind</h1>

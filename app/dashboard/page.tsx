@@ -11,6 +11,8 @@ import { AIChatPanel } from "@/components/ai-chat-panel"
 import { VulnerabilityCharts } from "@/components/vulnerability-charts"
 import type { VulnerabilityType, Vulnerability, SimulationResult } from "@/lib/types"
 import vulnerabilitiesData from "@/data/mock-vulnerabilities.json"
+import Image from "next/image";
+import { NotificationsDropdown } from "@/components/notifications-dropdown"
 
 export default function DashboardPage() {
   const searchParams = useSearchParams()
@@ -79,7 +81,13 @@ export default function DashboardPage() {
           </Button>
           <div className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0B3D91]">
-              <Satellite className="h-5 w-5 text-white" />
+              <Image
+                src="/logo.png"
+                alt="EcoMind Logo"
+                width={200}
+                height={200}
+                priority
+              />
             </div>
             <div>
               <h1 className="text-lg font-bold">EcoMind Dashboard</h1>
@@ -90,7 +98,14 @@ export default function DashboardPage() {
             </div>
           </div>
         </div>
-        <ThemeToggle />
+        <div className="flex gap-4 items-center">
+
+          <NotificationsDropdown/>
+
+          <ThemeToggle />
+          
+        </div>
+
       </header>
 
       {/* Main Content */}
@@ -123,7 +138,7 @@ export default function DashboardPage() {
           </div>
 
           {/* Bottom Section: Charts (Collapsible) */}
-          <div className="border-t border-border bg-card">
+          <div className="border-t border-border bg-card max-h-[400px]">
             <button
               onClick={() => setShowCharts(!showCharts)}
               className="flex w-full items-center justify-between px-6 py-3 text-left transition-colors hover:bg-accent"
