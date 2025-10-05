@@ -6,13 +6,14 @@ import { Satellite, Home, ChevronDown, ChevronUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { DashboardSidebar } from "@/components/dashboard-sidebar"
-import { MapView } from "@/components/map-view"
+// import { MapView } from "@/components/map-view"
 import { AIChatPanel } from "@/components/ai-chat-panel"
 import { VulnerabilityCharts } from "@/components/vulnerability-charts"
 import type { VulnerabilityType, Vulnerability, SimulationResult } from "@/lib/types"
 import vulnerabilitiesData from "@/data/mock-vulnerabilities.json"
 import Image from "next/image";
 import { NotificationsDropdown } from "@/components/notifications-dropdown"
+import { MapView } from "@/components/map-view/MapView"
 
 export default function DashboardPage() {
   const searchParams = useSearchParams()
@@ -130,7 +131,9 @@ export default function DashboardPage() {
           <div className="flex flex-1 overflow-hidden">
             {/* Map Container */}
             <div className="flex-1 bg-muted/20 p-6">
-              {/* <MapView vulnerabilities={filteredVulnerabilities} center={mapCenter} /> */}
+            <MapView />
+
+
             </div>
 
             {/* AI Chat Panel */}
