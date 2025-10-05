@@ -131,8 +131,9 @@ export default function DashboardPage() {
           <div className="flex flex-1 overflow-hidden">
             {/* Map Container */}
             <div className="flex-1 bg-muted/20 p-6">
-            <MapView />
-
+            <MapView selectedType={
+              selectedTypes === "Air Pollution" ? "AOD" : "NDVI"
+            } />
 
             </div>
 

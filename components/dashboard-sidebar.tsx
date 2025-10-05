@@ -1,4 +1,5 @@
 "use client"
+
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Slider } from "@/components/ui/slider"
@@ -18,15 +19,10 @@ interface DashboardSidebarProps {
   onToggleCollapse: () => void
 }
 
+// Vulnerabilities que representam camadas no mapa
 const allVulnerabilityTypes: VulnerabilityType[] = [
-  "Lack of Green Areas",
-  "Air Pollution",
-  // "Water Pollution",
-  // "Heat Island",
-  
-  // "Poor Transport Access",
-  // "Health Infrastructure Deficiency",
-  // "Education Deficiency",
+  "Lack of Green Areas", // NDVI
+  "Air Pollution"        // AOD
 ]
 
 export function DashboardSidebar({
@@ -51,6 +47,7 @@ export function DashboardSidebar({
 
   return (
     <div className="flex h-full w-80 flex-col border-r border-border bg-card">
+      {/* Header */}
       <div className="flex items-center justify-between border-b border-border p-4">
         <h2 className="font-semibold">Filters & Controls</h2>
         <Button variant="ghost" size="icon" onClick={onToggleCollapse}>
@@ -58,27 +55,32 @@ export function DashboardSidebar({
         </Button>
       </div>
 
+      {/* Scrollable area */}
       <ScrollArea className="flex-1">
         <div className="space-y-6 p-4">
-          {/* Vulnerability Type Filter */}
+          
+          {/* Vulnerability Layer Selector */}
           <div className="space-y-3">
             <Label className="text-sm font-semibold">Vulnerability Types</Label>
             <div className="space-y-2">
               {allVulnerabilityTypes.map((type) => {
-                const isSelected = selectedTypes.includes(type)
+                const isSelected = selectedTypes === type
                 const color = vulnerabilityColors[type]
 
                 return (
                   <button
                     key={type}
-                    onClick={() => {
-                      onTypeChange(type)
-                    }}
+                    onClick={() => onTypeChange(type)}
                     className={`flex w-full items-center gap-2 rounded-lg border p-3 text-left text-sm transition-colors ${
-                      isSelected ? "border-primary bg-primary/10" : "border-border bg-background hover:bg-accent"
+                      isSelected
+                        ? "border-primary bg-primary/10"
+                        : "border-border bg-background hover:bg-accent"
                     }`}
                   >
-                    <div className="h-3 w-3 rounded-full" style={{ backgroundColor: color }} />
+                    <div
+                      className="h-3 w-3 rounded-full"
+                      style={{ backgroundColor: color }}
+                    />
                     <span className="flex-1">{type}</span>
                     {isSelected && <div className="h-2 w-2 rounded-full bg-primary" />}
                   </button>
@@ -107,7 +109,7 @@ export function DashboardSidebar({
             </div>
           </div>
 
-          {/* Legend */}
+          {/* Severity Legend */}
           <div className="space-y-3">
             <Label className="text-sm font-semibold">Severity Legend</Label>
             <div className="space-y-2 rounded-lg border border-border bg-background p-3">
@@ -132,7 +134,7 @@ export function DashboardSidebar({
         </div>
       </ScrollArea>
 
-      {/* Action Buttons */}
+      {/* Footer Buttons */}
       <div className="space-y-2 border-t border-border p-4">
         <Button variant="outline" className="w-full bg-transparent" onClick={onReset}>
           <RotateCcw className="mr-2 h-4 w-4" />
