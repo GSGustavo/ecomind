@@ -19,13 +19,14 @@ interface DashboardSidebarProps {
 }
 
 const allVulnerabilityTypes: VulnerabilityType[] = [
-  "Air Pollution",
-  "Water Pollution",
-  "Heat Island",
   "Lack of Green Areas",
-  "Poor Transport Access",
-  "Health Infrastructure Deficiency",
-  "Education Deficiency",
+  "Air Pollution",
+  // "Water Pollution",
+  // "Heat Island",
+  
+  // "Poor Transport Access",
+  // "Health Infrastructure Deficiency",
+  // "Education Deficiency",
 ]
 
 export function DashboardSidebar({

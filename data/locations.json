@@ -1,18 +1,5 @@
 {
-  "United States": {
-    "New York": ["New York", "Buffalo", "Rochester"],
-    "California": ["Los Angeles", "San Francisco", "San Diego"],
-    "Illinois": ["Chicago", "Springfield", "Naperville"],
-    "Texas": ["Houston", "Dallas", "Austin"],
-    "Florida": ["Miami", "Orlando", "Tampa"]
-  },
-  "United Kingdom": {
-    "England": ["London", "Manchester", "Birmingham"],
-    "Scotland": ["Edinburgh", "Glasgow", "Aberdeen"]
-  },
-  "Canada": {
-    "Ontario": ["Toronto", "Ottawa", "Mississauga"],
-    "Quebec": ["Montreal", "Quebec City", "Laval"],
-    "British Columbia": ["Vancouver", "Victoria", "Surrey"]
+  "Brazil": {
+    "São Paulo": ["São Paulo"]
   }
 }

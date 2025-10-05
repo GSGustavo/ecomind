@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "TaskFlow - Complete Platform for Team Collaboration",
+  title: "EcoMind - Complete tool for human quality",
   description:
-    "Your team's toolkit to stop configuring and start innovating. Manage projects, track progress, and collaborate seamlessly with TaskFlow.",
+    "Complete tool for human quality",
     generator: 'v0.app'
 }
 

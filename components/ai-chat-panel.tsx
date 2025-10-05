@@ -99,7 +99,7 @@ Click "Apply Simulation" to see the changes on the map.`,
   }
 
   return (
-    <Card className="flex h-full flex-col">
+    <Card className="flex h-full flex-col overflow-auto">
       {/* Header */}
       <div className="flex items-center justify-between border-b border-border p-4">
         <div className="flex items-center gap-2">

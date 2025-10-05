@@ -82,7 +82,7 @@ export default function DashboardPage() {
               <Satellite className="h-5 w-5 text-white" />
             </div>
             <div>
-              <h1 className="text-lg font-bold">EcoPlan Dashboard</h1>
+              <h1 className="text-lg font-bold">EcoMind Dashboard</h1>
               <p className="text-xs text-muted-foreground">
                 {city}, {state}, {country}
                 {simulatedVulnerabilities && <span className="ml-2 text-[#2ECC71]">(Simulated)</span>}
@@ -113,7 +113,7 @@ export default function DashboardPage() {
           <div className="flex flex-1 overflow-hidden">
             {/* Map Container */}
             <div className="flex-1 bg-muted/20 p-6">
-              <MapView vulnerabilities={filteredVulnerabilities} center={mapCenter} />
+              {/* <MapView vulnerabilities={filteredVulnerabilities} center={mapCenter} /> */}
             </div>
 
             {/* AI Chat Panel */}

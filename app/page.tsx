@@ -9,15 +9,17 @@ import { VulnerabilityCheckbox } from "@/components/vulnerability-checkbox"
 import { Globe, Satellite, TrendingUp } from "lucide-react"
 import type { VulnerabilityType } from "@/lib/types"
 import locationsData from "@/data/locations.json"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const vulnerabilityTypes: VulnerabilityType[] = [
-  "Air Pollution",
-  "Water Pollution",
-  "Heat Islands",
   "Lack of Green Areas",
-  "Poor Transport Access",
-  "Health Infrastructure Deficiency",
-  "Education Deficiency",
+  "Air Pollution",
+  // "Water Pollution",
+  // "Heat Islands",
+  
+  // "Poor Transport Access",
+  // "Health Infrastructure Deficiency",
+  // "Education Deficiency",
 ]
 
 export default function HomePage() {
@@ -69,10 +71,12 @@ export default function HomePage() {
               <Satellite className="h-6 w-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">EcoPlan</h1>
+              <h1 className="text-xl font-bold text-foreground">EcoMind</h1>
               <p className="text-xs text-muted-foreground">Powered by NASA Data</p>
             </div>
           </div>
+
+          <ThemeToggle />
         </div>
       </header>
 
@@ -184,7 +188,7 @@ export default function HomePage() {
               </div>
             </CardHeader>
             <CardContent>
-              <div className="grid gap-3 md:grid-cols-2">
+              <div className="grid gap-3 md:grid-cols-2 cursor-pointer">
                 {vulnerabilityTypes.map((type) => (
                   <VulnerabilityCheckbox
                     key={type}
@@ -203,7 +207,7 @@ export default function HomePage() {
               size="lg"
               onClick={handleAnalyze}
               disabled={!isFormValid}
-              className="bg-nasa-blue hover:bg-nasa-blue/90"
+              className="bg-chart-6 hover:bg-chart-6 cursor-pointer"
             >
               <Globe className="mr-2 h-5 w-5" />
               Analyze Region
